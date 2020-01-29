@@ -6,6 +6,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.epsi.updapo.model.Category;
+import com.squareup.picasso.Picasso;
 
 class CategoriesDetailsActivity extends UPDAPOActivity {
     private Category category;

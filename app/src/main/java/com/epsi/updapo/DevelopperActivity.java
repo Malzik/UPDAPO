@@ -33,7 +33,7 @@ public class DevelopperActivity extends UPDAPOActivity {
         setContentView(R.layout.activity_list_name);
         showBackBtn();
         initData();
-        ListView listView=findViewById(R.id.listViewDeveloppers);
+        ListView listView=findViewById(R.id.listViewCategories);
         DevelopperAdapter adapter=new DevelopperAdapter(this,R.layout.c_developper,developpers);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
