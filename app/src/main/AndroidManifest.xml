@@ -20,6 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".UPDAPOActivity" />
+        <activity android:name=".DevelopperDetailsActivity" />
+        <activity android:name=".DevelopperActivity" />
     </application>
 
 </manifest>
