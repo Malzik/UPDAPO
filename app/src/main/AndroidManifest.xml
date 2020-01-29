@@ -30,6 +30,8 @@
         <activity android:name=".UPDAPOActivity" />
         <activity android:name=".CategoryActivity" />
         <activity android:name=".CategoriesDetailsActivity" />
+        <activity android:name=".DevelopperDetailsActivity" />
+        <activity android:name=".DevelopperActivity" />
     </application>
 
 </manifest>

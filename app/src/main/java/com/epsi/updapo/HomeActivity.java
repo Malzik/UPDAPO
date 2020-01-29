@@ -17,6 +17,7 @@ public class HomeActivity extends UPDAPOActivity {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.buttonZone1:
+                DevelopperActivity.display(HomeActivity.this);
                 break;
             case R.id.buttonZone2:
                 break;
