@@ -28,6 +28,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".UPDAPOActivity" />
+        <activity android:name=".CategoryActivity" />
+        <activity android:name=".CategoriesDetailsActivity" />
     </application>
 
 </manifest>
