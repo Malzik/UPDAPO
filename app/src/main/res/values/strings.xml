@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">UPDAPO</string>
+    <string name="buttonzone1_text">Developper zone</string>
+    <string name="buttonzone2_text">Show categories</string>
 </resources>

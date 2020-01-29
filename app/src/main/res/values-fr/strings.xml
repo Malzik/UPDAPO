@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">UDPAPO</string>
+    <string name="buttonzone1_text">Zone developpeur</string>
+    <string name="buttonzone2_text">Afficher les catégories</string>
+</resources>
