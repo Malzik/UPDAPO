@@ -5,8 +5,8 @@ import org.json.JSONObject;
 import java.io.Serializable;
 
 public class Developper implements Serializable {
-    private String name;
-    private String prenom;
+    private String lastName;
+    private String firstName;
     private String mail;
     private String website;
     private String description;
@@ -14,28 +14,28 @@ public class Developper implements Serializable {
 
 
     public Developper(JSONObject jsonObject) {
-        this.name = jsonObject.optString("name","");
-        this.prenom = jsonObject.optString("prenom", "");
+        this.lastName = jsonObject.optString("last_name","");
+        this.firstName = jsonObject.optString("first_name", "");
         this.mail = jsonObject.optString("mail", "");
         this.website = jsonObject.optString("website", "");
         this.description = jsonObject.optString("description", "");
         this.pictureUrl = jsonObject.optString("picture_url", "");
     }
 
-    public String getName() {
-        return name;
+    public String getLastName() {
+        return lastName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.lastName = name;
     }
 
-    public String getPrenom() {
-        return prenom;
+    public String getFirstName() {
+        return firstName;
     }
 
     public void setPrenom(String prenom) {
-        this.prenom = prenom;
+        this.firstName = prenom;
     }
 
     public String getMail() {

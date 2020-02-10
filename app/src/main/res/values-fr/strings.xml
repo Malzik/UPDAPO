@@ -2,4 +2,9 @@
     <string name="app_name">UDPAPO</string>
     <string name="buttonzone1_text">Zone developpeur</string>
     <string name="buttonzone2_text">Afficher les catégories</string>
+    <string name="email">E-Mail</string>
+    <string name="firstName">Prénom</string>
+    <string name="lastName">Nom</string>
+    <string name="website">Mon site</string>
+    <string name="about">A mon propos</string>
 </resources>

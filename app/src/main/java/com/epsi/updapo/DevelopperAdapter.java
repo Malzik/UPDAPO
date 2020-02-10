@@ -36,7 +36,7 @@ public class DevelopperAdapter extends ArrayAdapter<Developper> {
 
         Developper student=getItem(position);
 
-        textViewName.setText(student.getName());
+        textViewName.setText(student.getFirstName());
         textViewEmail.setText(student.getMail());
         Picasso.get().load(student.getPictureUrl()).into(imageView);
         return convertView;

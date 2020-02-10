@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.epsi.updapo.model.Category;
+import com.epsi.updapo.Model.Category;
 
 import org.json.JSONArray;
 import org.json.JSONException;

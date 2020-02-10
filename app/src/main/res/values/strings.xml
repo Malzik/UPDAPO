@@ -2,4 +2,9 @@
     <string name="app_name">UPDAPO</string>
     <string name="buttonzone1_text">Developper zone</string>
     <string name="buttonzone2_text">Show categories</string>
+    <string name="email">Mail</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="website">My website</string>
+    <string name="about">About me</string>
 </resources>

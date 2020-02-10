@@ -1,4 +1,4 @@
-package com.epsi.updapo.model;
+package com.epsi.updapo.Model;
 
 import org.json.JSONObject;
 

@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.epsi.updapo.model.Category;
+import com.epsi.updapo.Model.Category;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

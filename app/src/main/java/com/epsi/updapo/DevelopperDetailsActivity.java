@@ -23,15 +23,22 @@ public class DevelopperDetailsActivity extends UPDAPOActivity {
         setContentView(R.layout.activity_developper_details);
         showBackBtn();
         developper = (Developper) getIntent().getExtras().get("Developper");
-        TextView textName = findViewById(R.id.textViewNameDetails);
+
+        TextView textLastName = findViewById(R.id.textViewLastNameDetails);
+        TextView textFirstName = findViewById(R.id.textViewFirstNameDetails);
         TextView textEmail = findViewById(R.id.textViewEmailDetails);
+        TextView textDescription = findViewById(R.id.textViewDescription);
+        TextView textWebsite = findViewById(R.id.textViewWebSite);
         ImageView imageViewDetails= findViewById(R.id.imageViewDevelopperDetails);
 
-        textName.setText(developper.getName());
+        textLastName.setText(developper.getLastName());
+        textFirstName.setText(developper.getFirstName());
         textEmail.setText(developper.getMail());
+        textWebsite.setText(developper.getWebsite());
+        textDescription.setText(developper.getDescription());
         Picasso.get().load(developper.getPictureUrl()).into(imageViewDetails);
 
-        setTitle(developper.getName());
+        setTitle(developper.getFirstName());
 
     }
 }
