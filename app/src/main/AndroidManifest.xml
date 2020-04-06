@@ -29,9 +29,10 @@
         </activity>
         <activity android:name=".UPDAPOActivity" />
         <activity android:name=".CategoryActivity" />
-        <activity android:name=".CategoriesDetailsActivity" />
+        <activity android:name=".ProductActivity" />
         <activity android:name=".DevelopperDetailsActivity" />
         <activity android:name=".DevelopperActivity" />
+        <activity android:name=".ProductDetailsActivity" />
     </application>
 
 </manifest>

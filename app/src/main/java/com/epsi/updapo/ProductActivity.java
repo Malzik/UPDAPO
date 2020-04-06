@@ -7,6 +7,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.epsi.updapo.model.Category;
+import com.epsi.updapo.model.Product;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -14,39 +15,36 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import androidx.annotation.Nullable;
+public class ProductActivity extends UPDAPOActivity {
+    private Category category;
+    private ProductAdapter adapter;
 
-public class CategoryActivity extends UPDAPOActivity {
+    private ArrayList<Product> products = new ArrayList<>();
 
-    private CategoryAdapter adapter;
-
-    private ArrayList<Category> categories = new ArrayList<>();
-
-    public static void display(UPDAPOActivity activity) {
-        Intent intent = new Intent(activity, CategoryActivity.class);
+    public static void display(UPDAPOActivity activity, Category category) {
+        Intent intent = new Intent(activity, ProductActivity.class);
+        intent.putExtra("category", category);
         activity.startActivity(intent);
     }
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_name);
         showBackBtn();
+        category = (Category) getIntent().getExtras().get("category");
+
         ListView listView = findViewById(R.id.listViewCategories);
-        adapter = new CategoryAdapter(this, R.layout.c_category, categories);
+        adapter = new ProductAdapter(this, R.layout.c_product, products);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ProductActivity.display(CategoryActivity.this, categories.get(position));
+                ProductDetailsActivity.display(ProductActivity.this, products.get(position));
             }
         });
 
-        setTitle("Rayons");
-
-        String url = "https://djemam.com/epsi/categories.json";
-
-        new HttpAsyTask(url, new HttpAsyTask.HttpAsyTaskListener() {
+        new HttpAsyTask(category.getProductsUrl(), new HttpAsyTask.HttpAsyTaskListener() {
             @Override
             public void webServiceDone(String result) {
                 initData(result);
@@ -57,6 +55,8 @@ public class CategoryActivity extends UPDAPOActivity {
                 displayToast(e.getMessage());
             }
         }).execute();
+
+        setTitle(category.getTitle());
     }
 
     private void initData(String data) {
@@ -65,8 +65,8 @@ public class CategoryActivity extends UPDAPOActivity {
             jsonObject = new JSONObject(data);
             JSONArray jsonArray = jsonObject.getJSONArray("items");
             for (int i = 0; i < jsonArray.length(); i++) {
-                Category category = new Category(jsonArray.getJSONObject(i));
-                categories.add(category);
+                Product product = new Product(jsonArray.getJSONObject(i));
+                products.add(product);
             }
         } catch (JSONException e) {
             e.printStackTrace();

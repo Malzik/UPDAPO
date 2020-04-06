@@ -20,6 +20,7 @@ public class HomeActivity extends UPDAPOActivity {
                 DevelopperActivity.display(HomeActivity.this);
                 break;
             case R.id.buttonZone2:
+                CategoryActivity.display(HomeActivity.this);
                 break;
         }
     }

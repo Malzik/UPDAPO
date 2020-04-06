@@ -1,4 +1,4 @@
-package com.epsi.updapo.Model;
+package com.epsi.updapo.model;
 
 import org.json.JSONObject;
 
@@ -6,47 +6,39 @@ import java.io.Serializable;
 
 public class Category implements Serializable {
 
-    private String firstName = "";
-    private String lastName = "";
-    private String email = "";
-    private String pictureUrl = "";
+    private String category_id = "";
+    private String title = "";
+    private String products_url = "";
 
     public Category(JSONObject jsonObject) {
-        firstName = jsonObject.optString("firstName", "");
-        lastName = jsonObject.optString("lastName", "");
-        email = jsonObject.optString("email", "");
-        pictureUrl = jsonObject.optString("picture_url", "");
+        category_id = jsonObject.optString("category_id", "");
+        title = jsonObject.optString("title", "");
+        products_url = jsonObject.optString("products_url", "");
+        products_url = getProductsUrl().replace("http", "https");
     }
 
-    public String getFirstName() {
-        return firstName;
+
+    public String getCategoryId() {
+        return category_id;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setCategoryId(String category_id) {
+        this.category_id = category_id;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getTitle() {
+        return title;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getEmail() {
-        return email;
+    public String getProductsUrl() {
+        return products_url;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPictureUrl() {
-        return pictureUrl;
-    }
-
-    public void setPictureUrl(String pictureUrl) {
-        this.pictureUrl = pictureUrl;
+    public void setProductsUrl(String products_url) {
+        this.products_url = products_url;
     }
 }

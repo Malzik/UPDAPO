@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.epsi.updapo.Model.Developper;
+import com.epsi.updapo.model.Developper;
 import com.squareup.picasso.Picasso;
 
 public class DevelopperDetailsActivity extends UPDAPOActivity {

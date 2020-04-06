@@ -6,15 +6,15 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import androidx.annotation.Nullable;
-
-import com.epsi.updapo.Model.Developper;
+import com.epsi.updapo.model.Developper;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+
+import androidx.annotation.Nullable;
 
 
 public class DevelopperActivity extends UPDAPOActivity {
