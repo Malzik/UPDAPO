@@ -33,6 +33,10 @@
         <activity android:name=".DevelopperDetailsActivity" />
         <activity android:name=".DevelopperActivity" />
         <activity android:name=".ProductDetailsActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
